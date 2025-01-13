@@ -1,4 +1,4 @@
-Pagina de perfil/poertifolio com:
+Pagina de perfil/portfolio com:
 1. Sobre mim
 2. Projetos
 3. Contatos
