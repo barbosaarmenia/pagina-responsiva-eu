@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+}
+
+body {
+    background: url("/imgs/armênia-15.jpg") no-repeat center center/cover transparent 50%;
+    background-color: #b19393;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+
+.bebas-neue-regular {
+    font-family: "Bebas Neue", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+a{
+    color:  #fff;
+    text-decoration: none;
+    transition: 0.3s;
+    font-family: "Bebas Neue", serif;
+}
+a:hover{
+    opacity: 0.7;
+}
+.logo{
+    font-size: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+nav{
+    position: fixed; /*fixa ao topo*/
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #6e5555;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+main{
+    height: 92vh;
+}
+
+.nav-list{
+    list-style-type: none;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+}
+
+.nav-list li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu{
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #b19393;
+    margin: 8px;
+}
+
+section {
+    height: 100vh; /*altura total da tela*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bebas Neue", serif;
+}
+
+.normal div {
+    background-color: #b19393;
+    padding: 20px;
+}
+
+.bg div {
+    padding: 20px;
+    background-image: url(/imgd/armênia-15.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    color: hsl(82, 48%, 21%);
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.bg div + .normal div {
+    margin-top: 40px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+h1 {
+    font-family: "Bebas Neue", serif;
+    color: hsl(82, 48%, 21%);
+    font-size: 25px;
+}
+h2 {
+    font-family: "Bebas Neue", serif;
+    color:  #b19393;
+}
+.card__title {
+    font-family: "Bebas Neue", serif;
+    color: hsl(82, 48%, 21%);
+}
+h6 {
+    font-family: "Bebas Neue", serif;
+    font-size: 10px;
+    text-justify: distribute;
+}
+
+span {
+    color: #fff;
+    font-size: 24px;
+}
+img {
+    display: flex;
+    max-width: 100%;
+    height: auto;
+  }
+  .fa-brands {
+    color: hsl(82, 48%, 21%);
+  }
+
+  /*=============== CARD ===============*/
+  .container {
+      display: grid;
+      place-items: center;
+      margin-inline: 1.5rem;
+      padding-block: 5rem;
+  }
+  .card__container {
+      display: grid;
+      row-gap: 3.5rem;
+  }
+  .card__article {
+      position: relative;
+      /* overflow: hidden; */
+  }
+  
+  .card__img {
+      width: 328px;
+      border-radius: 1.5rem;
+  }
+  
+  .card__data {
+      width: 280px;
+      background-color:  hsl(0, 0%, 100%);
+      padding: 1.5rem 2rem;
+      box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+      border-radius: 1rem;
+      bottom: -2rem;
+      left: 0;
+      right: 0;
+      margin-inline: auto;
+      /* opacity: 0; */
+      transition: opacity 1s 1s;
+  }
+  
+  .card__description {
+      display: block;
+      font-size: .813rem;
+      margin-bottom: .25rem;
+  }
+  
+  .card__title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: hsl(0, 0%, 100%);
+      margin-bottom: .75rem;
+  }
+  
+  .card__button {
+      text-decoration: none;
+      font-size: .813rem;
+      font-weight: 500;
+      color: hsl(82, 48%, 21%);
+  }
+  
+  .card__button:hover {
+      text-decoration: underline;
+  }
+  
+  /* Naming animations in hover */
+  .card__article:hover .card__data {
+      animation: show-data 1s forwards;
+      opacity: 1;
+      transition: opacity .3s;
+  }
+  .card__article:hover {
+      animation: remove-overflow 2s forwards;
+  }
+  .card__article:not(:hover) {
+      animation: remove-data 1s forwards;
+  }
+  .card__article:not(:hover) .card__data{
+      animation: show-overflow 2s forwards;
+  }
+
+  
+  /* Card animation */
+  @keyframes show-data {
+      50% {
+          transform: translateY(-10rem);
+      }
+      100% {
+          transform: translateY(-7rem);
+      }
+  }
+  
+  @keyframes remove-overflow {
+      to {
+          overflow: initial;
+      }
+  }
+  
+  @keyframes remove-data {
+      0% {
+          transform: translateY(-7rem);
+      }
+      50% {
+          transform: translateY(-10rem);
+      }
+      100% {
+          transform: translateY(5rem);
+      }
+  }
+  
+  @keyframes show-overflow {
+      0% {
+          overflow: initial;
+          pointer-events: none;
+      }
+      50% {
+          overflow: hidden;
+      }
+  }
+  
+  /*=============== BREAKPOINTS ===============*/
+  /* For small devices */
+  @media screen and (max-width: 340px) {
+      .container{
+          margin-inline: 1rem ;
+      }
+      .card__data {
+          width: 250px;
+          padding: 1rem;
+      }
+  }
+  
+  /* For medium devices */
+  @media screen and (min-width: 768px) {
+     .card__container {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1.5rem;
+     } 
+  }
+  
+  /* For large devices */
+  @media screen and (min-width: 1120px) {
+      .container {
+          height: 100vh;
+      }
+      .card__container {
+          grid-template-columns: repeat(3, 1fr);
+      }
+      .card_img {
+          width: 348px;
+      }
+      .card__data {
+          width: 316px;
+          padding-inline: 2.5rem;
+      }
+  }
+
+@media (max-width:600px){
+    body{
+        overflow-x: hidden;
+    }
+
+    .nav-list{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: #b19393;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+    }
+   .normal div {
+    background-color: #b19393;
+   }
+    .nav-list li{
+        margin-left:0;
+        opacity: 0;
+        color: #6e5555;
+    }
+    .nav-list.active{
+        transform: translateX(0);
+    }
+    .mobile-menu{
+        display: block;
+    }
+
+    .container{
+        width: 100vh;
+    }
+
+    .painel:nth-of-type(4),.painel:nth-of-type(5){
+        display: none;
+    }
+}
